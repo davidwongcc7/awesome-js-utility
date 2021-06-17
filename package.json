@@ -9,7 +9,7 @@
         "typescript": "^4.3.3"
     },
     "name": "awesome-js-utility",
-    "version": "1.0.0",
+    "version": "1.0.2",
     "main": "lib/index.js",
     "types": "lib/index.d.ts",
     "dependencies": {},
@@ -26,6 +26,10 @@
     "author": "David Wong",
     "license": "ISC",
     "description": "",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/davidwongcc7/awsome-js-utility.git"
+    },
     "keywords": [
         "javascript",
         "utility"
