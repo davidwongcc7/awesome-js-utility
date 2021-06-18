@@ -1,4 +1,4 @@
-import merge from 'deepmerge-plus';
+const merge = require('deepmerge-plus');
 
 export const sleep = async (time: number): Promise<unknown> => {
     return new Promise((resolve) => setTimeout(resolve, time));
@@ -74,7 +74,7 @@ export const isInternetExplorer = (userAgent = ''): boolean => {
 };
 
 export const isSafari = () => {
-    return /^((?!chrome|android).)*safari/i.test(navigator.userAgent); 
+    return /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
 };
 
 const overwriteMerge = (destinationArray: any, sourceArray: any, options: any) => sourceArray;
