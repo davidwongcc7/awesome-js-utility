@@ -22,4 +22,3 @@ test('merge three object', () => {
     expect(result.c).toBe(8);
     expect(result.c[1]).toBeUndefined();
 });
-

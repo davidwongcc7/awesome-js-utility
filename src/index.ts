@@ -1,7 +1,7 @@
 const merge = require('deepmerge-plus');
 
-export const sleep = async (time: number): Promise<unknown> => {
-    return new Promise((resolve) => setTimeout(resolve, time));
+export const sleep = async (millisecond: number): Promise<unknown> => {
+    return new Promise((resolve) => setTimeout(resolve, millisecond));
 };
 
 export const escapeSpecialChars = (keyword: string): string => {
@@ -71,7 +71,7 @@ export const mergeObjectWithArrayOverWrite = (...data: Record<string, unknown>[]
     return merge.all([...data], { arrayMerge: overwriteMerge });
 };
 
-export const checkUnModifiedFields = (originalObject: Record<string, unknown>, newData: Record<string, unknown>) => {
+export const checkModifiedFields = (originalObject: Record<string, unknown>, newData: Record<string, unknown>) => {
     const result = JSON.parse(JSON.stringify(newData));
 
     Object.keys(result).forEach((key) => {
