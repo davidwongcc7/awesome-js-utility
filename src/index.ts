@@ -4,18 +4,6 @@ export const sleep = async (time: number): Promise<unknown> => {
     return new Promise((resolve) => setTimeout(resolve, time));
 };
 
-export const execShellCommand = (cmd: string) => {
-    const exec = require('child_process').exec;
-    return new Promise((resolve) => {
-        exec(cmd, (error: any, stdout: string, stderr: string) => {
-            if (error) {
-                return resolve(error);
-            }
-            resolve(stdout ? stdout : stderr);
-        });
-    });
-};
-
 export const escapeSpecialChars = (keyword: string): string => {
     // eslint-disable-next-line no-useless-escape
     return keyword.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&');
