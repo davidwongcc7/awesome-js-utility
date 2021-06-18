@@ -16,9 +16,9 @@ export const execShellCommand = (cmd: string) => {
     });
 };
 
-export const escapeSpecialChars = function (string: string): string {
+export const escapeSpecialChars = (keyword: string): string => {
     // eslint-disable-next-line no-useless-escape
-    return string.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&');
+    return keyword.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&');
 };
 
 export const round = (value: number, precision: number) => {
@@ -49,15 +49,13 @@ export const restrictQuery = (queryObject: Record<string, any>): Record<string, 
     const result: Record<string, string> = {};
     const queries = Object.entries(queryObject);
 
-    for (let i = 0; i < queries.length; i++) {
-        const [key, value] = queries[i];
-
+    queries.forEach(([key, value]) => {
         if (typeof value !== 'string') {
             throw new Error('query consist of non string query');
         }
 
         result[key] = value;
-    }
+    });
 
     return result;
 };

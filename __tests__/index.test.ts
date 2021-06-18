@@ -1,4 +1,4 @@
-import { roundToDecimal, getRandomKey, mergeObjectWithArrayOverWrite } from '../src';
+import { roundToDecimal, mergeObjectWithArrayOverWrite } from '../src';
 
 test('round integer to 2 decimal', () => {
     expect(roundToDecimal(5.555)).toBe('5.56');
