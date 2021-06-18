@@ -74,8 +74,7 @@ export const isInternetExplorer = (userAgent = ''): boolean => {
 };
 
 export const isSafari = () => {
-    const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
-    return isSafari;
+    return /^((?!chrome|android).)*safari/i.test(navigator.userAgent); 
 };
 
 const overwriteMerge = (destinationArray: any, sourceArray: any, options: any) => sourceArray;
