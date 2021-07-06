@@ -4,6 +4,10 @@ export const sleep = async (millisecond: number): Promise<unknown> => {
     return new Promise((resolve) => setTimeout(resolve, millisecond));
 };
 
+export const equalsIgnoreCase = (object: string, compare: string): boolean => {
+    return object.toLocaleLowerCase() === compare.toLocaleLowerCase();
+};
+
 export const escapeSpecialChars = (keyword: string): string => {
     // eslint-disable-next-line no-useless-escape
     return keyword.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&');
