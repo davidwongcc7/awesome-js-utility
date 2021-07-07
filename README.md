@@ -10,6 +10,7 @@
 | mergeObjectWithArrayOverWrite |                        merge objects with array overwrite                        |
 | checkModifiedFields           | compare two objects and find out the new key or update based on the first object |
 | trimArray                     |                        cut array to the length specified                         |
+| equalsIgnoreCase              |              compare two string without upper or lower case string               |
 
 ## Using npm
 
