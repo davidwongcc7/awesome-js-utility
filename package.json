@@ -27,7 +27,7 @@
         "preversion": "yarn lint",
         "version": "git add -A src",
         "postversion": "git push && git push --tags",
-        "publish": "np"
+        "update": "np"
     },
     "author": "David Wong",
     "license": "ISC",

@@ -87,6 +87,7 @@ export const checkModifiedFields = (originalObject: Record<string, unknown>, new
     return result;
 };
 
+// cut array with number specified
 export const trimArray = (arrayData: unknown[], reserveNumber: number) => {
     if (arrayData.length > reserveNumber) {
         arrayData = arrayData.filter((item, index) => {
